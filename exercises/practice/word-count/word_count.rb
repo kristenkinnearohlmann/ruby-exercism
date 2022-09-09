@@ -14,7 +14,6 @@ class Phrase
     def word_count
         word_counts = {}
         words = @word.gsub(/[^a-z0-9']/i," ").downcase.split(" ")
-        puts(words)
         words.each do |word|
             word.gsub!(/^'|'$/,"")
             if !word_counts.key?(word)
